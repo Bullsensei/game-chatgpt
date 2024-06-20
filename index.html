@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Game</title>
+    <link rel="stylesheet" crossorigin="" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="game-container">
+        <div id="svg-container">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80" fill="yellow" />
+            <polygon points="100,100 180,80 180,120" fill="black" />
+            <circle cx="150" cy="100" r="5" fill="black" />
+            <circle id="pacman-dot" cx="180" cy="100" r="5" fill="white" />
+          </svg>
+        </div>
+        <p id="countdown-timer">Next claim in: 2 hours</p>
+        <button id="claim-button" disabled>Claim</button>
+        <button class="nav-button" id="boost-button">BOOST</button>
+        <button class="nav-button" id="friend-button">FRIEND</button>
+        <button class="nav-button" id="task-button">TASK</button>
+        <button class="nav-button" id="rank-button">RANK</button>
+        <div id="stats">
+          <p id="coin-count">Coins: 0</p>
+          <p id="next-collect">Next collect: 2 hours</p>
+          <p id="friend-count">Friends: 0</p>
+          <p id="friend-earnings">Earnings from friends: 0</p>
+          <p id="invite-code">Your Invite Code:</p>
+          <input
+            type="text"
+            id="invite-input"
+            placeholder="Enter invite code"
+          />
+          <button id="submit-invite">Submit Invite</button>
+        </div>
+      </div>
+      <div id="friend-container" class="hidden">
+        <h3>Friend</h3>
+        <p id="friend-invite-code">Your Invite Code:</p>
+        <input
+          type="text"
+          id="friend-invite-input"
+          placeholder="Enter invite code"
+        />
+        <button id="friend-submit-invite">Submit Invite</button>
+        <button class="nav-button" id="home-button">Home</button>
+      </div>
+      <div id="task-container" class="hidden">
+        <h3>Tasks</h3>
+        <ul id="task-list">
+          <!-- Nhiệm vụ sẽ được thêm tại đây -->
+        </ul>
+        <button class="nav-button" id="home-button-task">Home</button>
+      </div>
+      <div id="rank-container" class="hidden">
+        <h3>Rank</h3>
+        <ul id="rank-list">
+          <!-- Thứ hạng sẽ được thêm tại đây -->
+        </ul>
+        <button class="nav-button" id="home-button-rank">Home</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
